@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    unoptimized: true
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'miro.medium.com',
+    //     port: '',
+    //     pathname: '/**', // Allows any path under this hostname
+    //   },
+    // ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
