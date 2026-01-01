@@ -1,35 +1,19 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useThemeStore } from "../store/theme"
 
 function ThemeSwitcher() {
-  // Initialize state with localStorage value
-  const [dark, setDark] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem("theme")
-      return savedTheme === "dark-mode"
-    }
-    return false
-  })
-
-  // Apply theme changes
-  useEffect(() => {
-    if (dark) {
-      document.body.classList.add("dark-mode")
-      localStorage.setItem("theme", "dark-mode")
-    } else {
-      document.body.classList.remove("dark-mode")
-      localStorage.setItem("theme", "light-mode")
-    }
-  }, [dark])
+  const theme = useThemeStore((s) => s.theme)
+  const toggleTheme = useThemeStore((s) => s.toggleTheme)
+  const isDark = theme === "dark"
 
   return (
-    <button 
-      id="theme-switcher" 
-      className="theme-switcher" 
-      onClick={() => setDark(!dark)}
+    <button
+      id="theme-switcher"
+      className="theme-switcher"
+      onClick={toggleTheme}
     >
-      Switch Theme
+      {isDark ? "Light Mode" : "Dark Mode"}
     </button>
   )
 }

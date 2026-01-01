@@ -13,7 +13,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-body.dark-mode {
+:is(body.dark-mode, .dark-mode) {
   background-color: #121212;
   color: #eee;
 }
@@ -31,7 +31,7 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-body.dark-mode .header {
+:is(body.dark-mode, .dark-mode) .header {
   background-color: #1f1f1f;
   border-bottom: 1px solid #333;
 }
@@ -73,7 +73,7 @@ body.dark-mode .header {
   font-size: 0.9em;
 }
 
-body.dark-mode .theme-switcher {
+:is(body.dark-mode, .dark-mode) .theme-switcher {
   background-color: #555;
 }
 
@@ -94,7 +94,7 @@ main h1 {
   font-size: 3em;
 }
 
-body.dark-mode main h1 {
+:is(body.dark-mode, .dark-mode) main h1 {
   color: #eee;
 }
 
@@ -109,7 +109,7 @@ body.dark-mode main h1 {
   margin-top: -10px;
 }
 
-body.dark-mode .subtitle {
+:is(body.dark-mode, .dark-mode) .subtitle {
   color: #aaa;
 }
 
@@ -123,7 +123,7 @@ body.dark-mode .subtitle {
   transition: box-shadow 0.3s ease;
 }
 
-body.dark-mode .post-list .post-item {
+:is(body.dark-mode, .dark-mode) .post-list .post-item {
   background-color: #1e1e1e;
   border-color: #333;
 }
@@ -137,7 +137,7 @@ body.dark-mode .post-list .post-item {
   font-size: 1.5em;
 }
 
-body.dark-mode .post-list .post-item h2 a {
+:is(body.dark-mode, .dark-mode) .post-list .post-item h2 a {
   color: #eee;
 }
 
@@ -145,7 +145,7 @@ body.dark-mode .post-list .post-item h2 a {
   color: #666;
 }
 
-body.dark-mode .post-list .post-item p {
+:is(body.dark-mode, .dark-mode) .post-list .post-item p {
   color: #aaa;
 }
 
@@ -157,7 +157,7 @@ body.dark-mode .post-list .post-item p {
   border: 1px solid #ddd;
 }
 
-body.dark-mode .post-detail {
+:is(body.dark-mode, .dark-mode) .post-detail {
   background-color: #1e1e1e;
   border-color: #333;
 }
@@ -168,7 +168,7 @@ body.dark-mode .post-detail {
   margin-bottom: 20px;
 }
 
-body.dark-mode .post-detail .meta {
+:is(body.dark-mode, .dark-mode) .post-detail .meta {
   color: #aaa;
 }
 
@@ -198,7 +198,7 @@ body.dark-mode .post-detail .meta {
   border-top: 1px solid #ddd;
 }
 
-body.dark-mode .footer {
+:is(body.dark-mode, .dark-mode) .footer {
   background-color: #1f1f1f;
   color: #eee;
   border-top: 1px solid #333;
