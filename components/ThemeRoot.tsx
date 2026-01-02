@@ -1,6 +1,5 @@
 "use client"
 
-import { ReactNode } from "react"
 import { useThemeStore } from "../store/theme"
 
 export default function ThemeRoot({ children }: { children: React.ReactNode }) {
